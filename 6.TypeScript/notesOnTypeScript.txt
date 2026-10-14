@@ -1,0 +1,57 @@
+/*
+  interfaces are contracts that have to be respected by whomever IMPLEMENTS them
+  while
+  classes are small parts of my current class I need to EXTEND with (inherit from) them
+
+  A class can extend another class and implement interfaces at the same time!
+*/
+class Animal {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  makeSound() {
+    console.log("Some generic sound");
+  }
+}
+
+interface CanFly {
+  fly(): void;
+}
+
+class Bird extends Animal implements CanFly {
+  fly() {
+    console.log("Flying!");
+  }
+}
+
+
+/*
+## 🔥 **Key Differences Between Abstract Classes and Interfaces**  
+
+| Feature              | **Abstract Class** | **Interface** |
+|----------------------|------------------|--------------|
+| Can have properties? | ✅ Yes            | ✅ Yes (but no initialization) |
+| Can have methods?    | ✅ Yes (with implementation) | ❌ No (only method signatures) |
+| Can have constructors? | ✅ Yes | ❌ No |
+| Can have abstract methods? | ✅ Yes | ✅ Yes (all methods are abstract) |
+| Supports multiple inheritance? | ❌ No (only one `extends`) | ✅ Yes (can implement multiple interfaces) |
+| Can be instantiated? | ❌ No | ❌ No |
+
+---
+
+## 🔹 **When to Use Abstract Classes vs. Interfaces?**  
+
+### ✅ Use **Abstract Classes** when:  
+✔ You need **shared behavior** (implemented methods).  
+✔ You want to **enforce method implementation** while allowing some methods to be shared.  
+✔ You need **properties with default values or constructors**.  
+
+### ✅ Use **Interfaces** when:  
+✔ You only need to **define a contract** (no implementation).  
+✔ You want to allow **multiple implementations** (multiple inheritance).  
+✔ You want to enforce consistency across different classes.  
+
+*/

@@ -1,0 +1,130 @@
+.back {
+  height: 160px;
+  width: 160px;
+  background-color: aquamarine;
+  position: relative;
+}
+.blue, .red, .green, .black {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+.black {
+  z-index: 0;
+  background-color: black;
+  top: 40px;
+  left: 20px;
+}
+.blue {
+  z-index: 1;
+  background-color: blue;
+  top: 20px;
+  left: 20px;
+}
+.green {
+  z-index: 2;
+  top: 40px;
+  left: 40px;
+  background-color: green;
+}
+.red {
+  z-index: 3;
+  top: 60px;
+  left: 60px;
+  background-color: red;
+}
+/* assignment 2 */
+.main {
+  width: 400px;
+  padding: 20px;
+  align-self: center;
+  border: 5px solid;
+  border-color: lightcoral lightblue;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: burlywood;
+  position: relative;
+}
+.top-left, .top-right, .bottom-left, .bottom-right {
+  position: absolute;
+  padding: 10px 20px;
+  background-color: lightblue;
+}
+.top-left {
+  border-right: lightcoral 5px solid;
+  top: -20px;
+  left: -30px;
+  
+}
+.top-right {
+  border-left: lightcoral 5px solid;
+  top: -20px;
+  right: -30px;
+}
+.bottom-left {
+  border-right: lightcoral 5px solid;
+  bottom: -20px;
+  left: -30px;
+}
+.bottom-right {
+  border-left: lightcoral 5px solid;
+  bottom: -20px;
+  right: -30px;
+}
+/* assignment 3 */
+.list {
+  width: 400px;
+  list-style-type: none;
+  
+}
+
+ul li, li ul {
+  padding: 5px;
+  margin: 15px;
+  background-color: lightblue;
+}
+
+ul ul li, ul ol li{
+  background-color: white;
+  margin: 5px;
+  padding: 2px;
+}
+ul ul li {
+  list-style-position: outside;
+}
+/* Assignment 4 */
+table {
+  margin: auto;
+  text-align: center;
+  border-bottom: 2px solid purple;
+}
+thead tr td {
+  color: white;
+  font-weight: bold;
+  background-color: black;
+}
+
+td {
+  padding: 10px 20px;
+  background-color: lightseagreen;
+}
+
+.view {
+  color: white;
+  background-color: lightblue;
+  padding: 5px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+.del {
+  color: white;
+  background-color: lightcoral;
+  padding: 5px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+caption {
+  padding: 5px;
+}

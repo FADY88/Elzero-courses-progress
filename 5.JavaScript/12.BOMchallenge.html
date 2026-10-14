@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: blue;
+      font-size: 16px;
+    }
+    body * {
+      color: inherit;
+    }
+    .add {
+      background-color: beige;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 7fr 2fr;
+    }
+    .show {
+      padding: 20px;
+      background-color: beige;
+    }
+    .note {
+      background-color: white;
+      border: 5px solid beige;
+      display: grid;
+      grid-template-columns: 7fr 1fr;
+    }
+  </style>
+</head>
+<body>
+  <div class="add">
+    <input type="text">
+    <button id="add">Add Task</button>
+  </div>
+  <hr>
+  <div class="show">
+  </div>
+  <hr>
+  <form id="one" action="">
+    <select name="" id="font">
+      <option value="Open Sans" selected>Open Sans</option>
+      <option value="Cairo">Cairo</option>
+      <option value="Roboto">Roboto</option>
+    </select>
+    <select name="" id="color" >
+      <option value="black" selected>Black</option>
+      <option value="blue">blue</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="yellow">yellow</option>
+      <option value="lightblue">Lightblue</option>
+    </select>
+    <select name="" id="size">
+      <option value="16" selected>16</option>
+      <option value="18">18</option>
+      <option value="22">22</option>
+      <option value="24">24</option>
+      <option value="26">26</option>
+      <option value="28">28</option>
+    </select>
+  </form>
+  <script src="12.BOMchallenge.js"></script>
+</body>
+</html>

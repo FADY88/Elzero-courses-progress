@@ -1,0 +1,107 @@
+/* name of element, .className, #id (ids are not preferred here> */
+p {
+  color: red;
+  font-size: 40px;
+}
+
+.paragraph {
+  color: green;
+}
+
+.special {
+  color: aquamarine;
+  background-image: url("../google.png");
+}
+
+.div1 {
+  background-color: red; /* color name*/
+  /* red green blue alpha channel */
+  background-color: rgb(0 0 0 / 50%);
+  /* hexadecimal */
+  background-color: #717588;
+  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQjzC2JyZDZ_RaWf0qp11K0lcvB6b6kYNMoqtZAQ9hiPZ4cTIOB&psig=AOvVaw3Lt0qCwryYnQ4gJwSWZMIB&ust=1740677144370000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJiUreft4YsDFQAAAAAdAAAAABAE);
+  /* repeat , no-repeat, repeat-x, repeat-y*/
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: left top;
+  background-size: auto;
+  padding: 10px 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/*
+  display property
+
+  Block
+
+  - Take Full Width If No Width
+  - Add Line Break
+  - Respect Padding, Margin, Width, Height
+
+  Inline
+
+  - Does Not Respect Width, Height
+  - Respect Padding And Margin [ Just Wight + Left ]
+  - Does Not Add Line Break
+  - Allow Elements Before And After It in The Same Line
+
+  Inline-Block
+
+  - Allow Elements Before And After It in The Same Line
+  - Respect Padding, Margin, Width, Height
+
+  None
+  - makes element invisible
+*/
+
+div {
+  background-color: #DDD;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+  /* border-width: 10px;
+  border-color: red green blue yellow;
+  border-style: solid; */
+  border: red 10px solid;
+  /* outline works like border but worse in many ways */
+  display: block;
+  /* makes element invisible and keeping its place */
+  visibility: visible;
+}
+
+/* nesting elements */
+div h2 {
+  background-color: aquamarine;
+}
+
+div {
+  background-color: red;
+  padding: 10px;
+  display: inline-block;
+  max-width: 400px;
+  overflow: auto;
+  /* 
+  color
+  background-color
+  text-shadow: horizontal-shadow vertical-shadow blur color */
+  text-shadow: 0 0 0 red;
+}
+
+div {
+  background-color: #f9f9f9;
+  text-align: center;
+  direction: ltr;
+  text-decoration: line-through;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-indent: 40px;
+  line-height: 1.6;
+  word-spacing: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+img {
+  vertical-align: middle;
+}

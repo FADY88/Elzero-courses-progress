@@ -1,0 +1,27 @@
+body {
+  margin: 0px;
+}
+.parent {
+  background-color: red;
+  padding: 10px;
+}
+.parent div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  /* space 1% * 5 spaces = 5%
+      95% available space
+      element space is 95% / 4 = 23.75% */
+  width: calc((100% - (1% * 5)) / 4);
+  /* fixed space */
+  /* width: calc((100% - (10px * 5)) / 4); */
+  float: left;
+  margin-left: 1%;
+
+  /* opacity is the alpha channel of the whole element not just background */
+  opacity: 0.8;
+}
+.clear {
+  clear: both;
+}

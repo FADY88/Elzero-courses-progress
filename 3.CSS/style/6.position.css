@@ -1,0 +1,32 @@
+div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+}
+.one {
+  background-color: red;
+  /*
+  <body> position is relative by default
+  position
+    static -> default, no moving
+    absolute -> move relative to first parent coordinates whose position is relative
+    fixed -> stays in position even when scroll
+    relative -> move relative to original position
+    sticky -> will stick to position when reached
+    top, left, right, bottom are used with position
+   */
+  position: relative;
+  top: 0;
+  /* z-index works is element has position */
+  z-index: 2;
+}
+.two {
+  background-color: green;
+  position: absolute;
+}
+.parent {
+  height: 400px;
+  width: 400px;
+  background-color: aquamarine;
+  position: relative;
+}

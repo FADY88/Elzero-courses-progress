@@ -1,0 +1,106 @@
+/*
+  CSS Selectors
+  any selector like [+, >, ~, ...] can be repeat => div + p + div
+
+  - *                              => any element
+  - Element                        => [p, div, h2]
+  - Element OtherElement           => div p
+  - .class-name                    => that class
+  - #id-name                       => that id
+  - .parent .child                 => indirect Child
+  - .class-one.class-two           => element has both classes
+  - Element.class-name             => specific element with that class
+  - .parent > .child               => direct child
+  - .class-name div, .class-name p => any div or p inside .class-name
+
+  - Element + Other Element => two contiguous elements, will apply on last one
+  - Element ~ Other Elements => two elements maybe something between, will apply on last one
+  - [Attribute] => any element that has that attribute
+  - Element[Attribute] => specific element that has that attribute
+  - [Attribute=Value]  => any element with that attribute equal value
+  - Element[Attribute=Value]
+  - [Attribute~=value] => Contains A Word     " ... value ... "
+  - [Attribute*=value] => Contains A string   "...value..."
+  - [Attribute^=value] => Start With A String "value..."
+
+  these are pseudo classes by the way
+  before the colon use any way of selecting from above
+  any function with "nth" can take even or odd and mathematical functions
+  - :first-child
+  - :last-child
+  - :first-of-type
+  - :last-of-type
+  - :only-child
+  - :only-of-type
+
+  - :not(Selectors)
+  - :nth-child(n)  // math function => :nth-child(3n+1)
+  - :nth-last-child(n)
+  - :nth-of-type(n)
+  - :nth-last-of-type(n)
+
+  - :root
+  - :checked
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+[Attribute^=Value] {
+  background-color: red;
+}
+/* good example */
+input[type="checkbox"]:checked + label {
+  color: red;
+}
+/* good trick */
+input:required + span:before {
+  content: "*";
+  color: red;
+}
+
+/* assignment 1 */
+/* I may change names of classes or attributes to put all assignments here */
+div.main.red {
+  color: red;
+}
+/* assignment 2 */
+div.parent > div.child:last-child {
+  color: red;
+}
+/* assignment 3 */
+div.baby:only-child {
+  color: red;
+}
+/* assignment 4 */
+div[title="Elzero2"]:nth-child(19), div[title="Hello"], div[title="HTML"] {
+  color: red;
+}
+/* assignment 5 */
+div:not(.no-need) div[title="Elzero"]:last-child:not(div.no-need) {
+  color: red;
+}
+/* assignment 6 */
+div.assignment-6 > div:not(.no-need) > div:nth-last-of-type(2) {
+  color: red;
+}
+/* assignment 7 */
+div.assignment-7 > div:not(.no-need):not(.no-need-2) > h3 + div:not(.no-need):nth-child(5) {
+  color: red;
+}
+/* assignment 8 */
+div.assignment-8 *:not(h3):not(:first-child):not(:last-child) {
+  color: red;
+}
+/* of course I can show off and put all assignments in one selection
+    to write "color: red:" once 😅 */

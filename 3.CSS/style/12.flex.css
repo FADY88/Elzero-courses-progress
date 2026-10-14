@@ -1,0 +1,84 @@
+/*
+  Flexible Box
+  For Parent
+  - display: flex or inline-flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  ---
+  justify all content horizontally or vertical if flex-direction is column
+  start and end get reversed when flex-direction is reversed
+  - justify-content: flex-start => Default Value
+  
+  align individual items vertically or vertical if flex-direction is column
+  start and end get reversed when flex-direction is reversed
+  - align-items: stretch => default value
+
+  align all content vertically
+  - align-content: stretch => default value
+
+  For child
+  chance of growing or shrinking if there is space
+  - flex-grow: 0 => default value
+  - flex-shrink: 1 => default value
+  order works with the order of elements in html
+  - order: 0 => default value
+  change height or width according to flex-direction
+  - flex-basis: auto => default value
+  - flex: [flex grow] [flex shrink] [flex basis]
+  align element vertically
+  - align-self: auto => default value
+
+  This can be confusing, but align-content determines the spacing between lines,
+  while align-items determines how the items as a whole are aligned within the container.
+  When there is only one line, align-content has no effect.
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: aquamarine;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: 25%;
+  text-align: center;
+  padding: 25px;
+}
+.float {
+  overflow: hidden;
+  background-color: aquamarine;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: right;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+.center {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  height: 200px;
+  /* finally align content inside element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

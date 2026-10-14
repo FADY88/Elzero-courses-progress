@@ -1,0 +1,232 @@
+/* assignment 1 */
+.one {
+  /* auto means make each side equal to the other */
+  margin: 5px auto;
+  text-align: center;
+  padding: 6px;
+  width: 300px;
+  background-color: aquamarine;
+}
+.one:empty {
+  height: 18px;
+  background-color: red;
+}
+/* assignment 2 */
+.two {
+  background-color: gray;
+  margin: 8px auto;
+  padding: 15px;
+  padding-left: 0px;
+  width: fit-content;
+}
+.two::first-letter {
+  margin-left: -10px;
+  color: white;
+  background-color: red;
+  padding: 8px;
+}
+/* assignment 3 */
+.three {
+  background-color: #eee;
+  padding: 10px;
+  position: relative;
+  margin-left: 100px;
+  border-left: 6px solid #c2185b;
+  padding-left: 10px;
+}
+.three::before {
+  content: attr(person-data);
+  background-color: #eee;
+  padding: 8px;
+  position: absolute;
+  left: -100px;
+  margin-top: -10px;
+  min-width: 50px;
+}
+.three::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  margin-top: -5px;
+  height: 0px;
+  width: 0px;
+  border-width: 14px;
+  border-style: solid;
+  border-color: transparent #c2185b transparent transparent;
+}
+
+/* .three {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.three::before {
+  content: attr(person-data);
+  background: #ccc;
+  padding: 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.three::after {
+  content: "";
+  position: absolute;
+  left: 90px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid #c2185b;
+}
+
+.three {
+  border-left: 10px solid #c2185b;
+  padding-left: 20px;
+} */
+
+/* assignment 4 */
+.four {
+  background-color: #eee;
+  border-right: #F44336 5px solid;
+  counter-increment: counter;
+  padding: 20px;
+}
+.four::before {
+  content: counter(counter);
+  background-color: #F44336;
+  padding: 20px 24px;
+  position: relative;
+  left: -20px;
+}
+/* assignment 5 */
+.five {
+  counter-increment: new;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+  margin-left: 14%;
+  float: left;
+  border-radius: 50%;
+  border: black 3px solid;
+  /* horizontal-shadow vertical-shadow blur spread color inset */
+  box-shadow:
+      5px 5px 0 1px #2196F3,
+    -5px -5px 0 1px #E91E63;
+}
+.five::before {
+  content: counter(new);
+  padding: 3px 8px;
+  background-color: black;
+  color: white;
+  position: relative;
+  top: -10%;
+  left: 38%;
+  border-radius: 50%;
+}
+.five::after {
+  content: "Element";
+  position: relative;
+  top: 37%;
+}
+.clear {
+  clear: both;
+}
+/* assignment 6 */
+.weird-shape {
+  background-color: #b17676;
+  height: 300px;
+  width: 300px;
+  margin: 10px auto;
+  border-top-left-radius: 28px 85px;
+  border-top-right-radius: 150px 150px;
+  border-bottom-left-radius: 150px 150px;
+  border-bottom-right-radius: 28px 85px;
+  /* horizontal-shadow vertical-shadow blur spread color inset */
+  box-shadow:
+    5px 5px 30px 5px black inset,
+    -5px -5px 30px 5px black inset;
+}
+/* assignment 7 */
+.seven {
+  width: 550px;
+  height: 275px;
+  margin: 10px auto;
+}
+.basic, .pro {
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  background-color: #EEEEEE;
+  width: 45%;
+  height: inherit;
+  border-radius: 5px;
+}
+.separator {
+  width: 2px;
+  height: 100%;
+  float: left;
+  background-color: #2196F3;
+  margin: 0px calc(5% - 1px);
+  position: relative;
+}
+.separator::before {
+  content: "Or";
+  color: white;
+  background-color: #2196F3;
+  padding: 5px;
+  border-radius: 50%;
+  position: relative;
+  top: 48%;
+  left: -12px;
+}
+.basic::before, .pro::before {
+  content: attr(class);
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  background-color: #2196F3;
+  position: relative;
+  color: white;
+  border-radius: 6px;
+  top: 5%;
+}
+.basic::before {
+  padding: 5% 36%;
+  left: 7%;
+}
+.pro::before {
+  padding: 5% 37%;
+  left: 9%;
+}
+.basic::after, .pro::after {
+  content: attr(price);
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  background-color: #DDDDDD;
+  position: relative;
+  border-radius: 50%;
+  top: 54%;
+}
+.basic::after {
+  padding: 34% 31%;
+  right: 82%;
+}
+.pro::after {
+  padding: 35% 33%;
+  right: 75%;
+}

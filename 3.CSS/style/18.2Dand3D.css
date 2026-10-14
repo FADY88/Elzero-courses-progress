@@ -1,0 +1,138 @@
+.back {
+  background-color: rgba(255, 0, 0, 23%);
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.one {
+  margin: 200px auto;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255 0 0 / 39%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  border: black 5px solid;
+  /* scale
+      can flip the element if used a negative number in scale() */
+  /* transform: scaleX(2);
+  transform: scaleY(2); */
+  /* translate
+      moves element in the x and y axises */
+  /* skew: I don't know how to describe this
+      it some how change element's dimensions */
+  transform: scale(-1.2, 1.4) translate(-25%, 15px) skew(3deg, 10deg);
+
+}
+.image {
+  margin: 10px auto;
+  height: 55px;
+  width: 56px;
+  overflow: hidden;
+  border: 5px black solid;
+}
+.image:hover img {
+  /* rotate transform use units (deg, rad, grad, turn)
+  rotate the element around z axis */
+  transform: scale(1.3) rotate(10deg);
+}
+
+.skew {
+  position: relative;
+  color: white;
+  margin: 20px auto;
+  width: fit-content;
+  padding: 20px;
+}
+.skew::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: skewX(20deg);
+}
+/*
+  skew in matrix takes tan(degree)
+  matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+  can use transform wit all the function without matrix using this order
+  - transform: translateX() translateY() scaleX() skewY() skewX() scaleY()
+*/
+/*
+  transform-origin
+  Syntax
+  Default Values => x-position y-position (z-position if 3D)
+  2D Transform => transform-origin(X, Y)
+  3D Transform => transform-origin(X, Y, Z)
+  X-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Left = 0%
+  -- Center = 50%
+  -- Right = 100%
+  Y-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Top = 0%
+  -- Center = 50%
+  -- Bottom = 100%
+*/
+/*
+  3D world
+  rotate3d(x, y, z, degree)
+  translate3d(x, y, z) used with perspective: in parent element to length of z axis
+  perspective-origin: center center => used in parent to set origin point in z axis
+*/
+/*
+  I need more practice on the following flipping trick
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  margin: 40px auto;
+  width: 200px;
+  perspective: 600px;
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: right center;
+}
+.box:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+}
+.box .front {
+  background-color: red;
+}
+.box .back {
+  background-color: green;
+  transform: rotateY(180deg);
+}

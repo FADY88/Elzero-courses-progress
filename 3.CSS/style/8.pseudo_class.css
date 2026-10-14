@@ -1,0 +1,165 @@
+/* Pseudo classes */
+.one {
+  background-color: red;
+  color: white;
+}
+.two {
+  background-color: #EEE;
+}
+a {
+  color: green;
+  text-decoration: none;
+}
+/* control a elements whin hovered over */
+a:hover {
+  color: red;
+}
+a:visited {
+  color: blue;
+}
+/* control any element that is empty */
+:empty {
+  /* border: 10px solid red; */
+  margin: 0;
+}
+.ch:checked {
+  display: none;
+}
+.in:focus {
+  border-color: blue;
+  outline: none
+}
+/* control the label after ch class */
+.ch + label {
+  color: purple;
+}
+/* pseudo elements */
+.one span {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+.two::first-letter {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+.three::first-line {
+  font-weight: bold;
+  color: green;
+}
+::selection {
+  background-color: black;
+  color: yellow;
+}
+/* another pseudo elements */
+.parent {
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* very cool way of using variables in css */
+  counter-increment: counter;
+}
+.t, .y, .z {
+  background-color: #eee;
+  padding: 10px;
+  width: 300px;
+  float: left;
+  position: relative;
+}
+.t::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  right: -10px;
+  top: 0;
+  background-color: #009688;
+}
+.t::before {
+  content: "from css";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 0;
+  height: 0;
+  /* background-color: white; */
+  margin-top: -10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #009688 transparent transparent;
+}
+.user {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+
+.y::after {
+  /* access counter in parent */
+  content: counter(counter);
+  position: absolute;
+  padding: 10px;
+  background-color: #009688;
+  width: 5px;
+  height: 100%;
+  right: -10px;
+  top: 0;
+}
+
+.z::after {
+  /* access attribute in element */
+  /*  you can add url() to add image or link */
+  content: attr(variableToAccessCSS);
+  position: absolute;
+  padding: 10px;
+  background-color: #009688;
+  right: -90px;
+  top: 40px;
+}
+
+.z::before {
+  /* access attribute in element */
+  content: attr(toolTip);
+  display: none;
+}
+/* change the before pseudo element when hovered on .z */
+.z:hover::before {
+  display: block;
+}
+/* border radius */
+.circle {
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 20px auto;
+  /* 50% means it will be a circle */
+  border-radius: 50%;
+  border: blue 7px solid;
+  /* before 2021 outline didn't respect border-radius but now it does */
+  outline: #009688 5px solid;
+  /* border-top-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px; */
+  align-content: center;
+}
+
+/* box shadow */
+.circle {
+  /* horizontal-shadow vertical-shadow blur spread color inset */
+  /* outline does not respect box-shadow */
+  box-shadow:
+    0 0 15px 0 #F10000,
+    0 0 15px 0 #000,
+    0 0 15px 0 #080,
+    0 0 15px 0 #00f,
+    0 0 15px 0 yellow;
+}

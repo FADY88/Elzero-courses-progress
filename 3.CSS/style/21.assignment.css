@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.one {
+  --length: 100px;
+  --borderWidthPercentage: 0.1;
+  width: var(--length);
+  height: var(--length);
+  margin: calc(4 * var(--borderWidthPercentage) * var(--length)) auto;
+  background-color: transparent;
+  border-radius: 50%;
+  border: calc(var(--borderWidthPercentage) * var(--length)) solid #E4238B;
+  border-right: transparent solid calc(var(--borderWidthPercentage) * var(--length));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation */
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.one::before, .one::after {
+  content: "";
+  background-color: transparent;
+  border: calc(1 * var(--borderWidthPercentage) * var(--length)) solid;
+  position: absolute;
+  border-radius: 50%;
+}
+.one::before {
+  width: calc(15.5 * var(--borderWidthPercentage) * var(--length));
+  height: calc(15.5 * var(--borderWidthPercentage) * var(--length));
+  border-color: #FC9F00;
+  border-top: transparent solid calc(var(--borderWidthPercentage) * var(--length));
+  z-index: -2;
+}
+.one::after {
+  width: calc(12.5 * var(--borderWidthPercentage) * var(--length));
+  height: calc(12.5 * var(--borderWidthPercentage) * var(--length));
+  border-color: #258EF4;
+  border-left: transparent solid calc(var(--borderWidthPercentage) * var(--length));
+  z-index: -1;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.one:hover {
+  animation-play-state: paused;
+}
+/* assignment 2 */
+/* the animation keyframe is used from the previous assignment */
+.two {
+  --length: 100px;
+  --borderWidthPercentage: 0.1;
+  width: var(--length);
+  height: var(--length);
+  margin: calc(4 * var(--borderWidthPercentage) * var(--length)) auto;
+  background-color: transparent;
+  border-radius: 50%;
+  border: calc(var(--borderWidthPercentage) * var(--length)) solid #258EF4;
+  border-bottom: transparent solid calc(var(--borderWidthPercentage) * var(--length));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation */
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+.two::before, .two::after {
+  content: "";
+  background-color: transparent;
+  border: calc(1 * var(--borderWidthPercentage) * var(--length)) solid;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin linear infinite paused;
+}
+.two::before {
+  width: calc(15.5 * var(--borderWidthPercentage) * var(--length));
+  height: calc(15.5 * var(--borderWidthPercentage) * var(--length));
+  border-color: black;
+  border-bottom: transparent solid calc(var(--borderWidthPercentage) * var(--length));
+  z-index: -2;
+  animation-duration: 2s;
+}
+.two::after {
+  width: calc(12.5 * var(--borderWidthPercentage) * var(--length));
+  height: calc(12.5 * var(--borderWidthPercentage) * var(--length));
+  border-color: #FC9F00;
+  border-bottom: transparent solid calc(var(--borderWidthPercentage) * var(--length));
+  z-index: -1;
+  animation-duration: 4s;
+}
+.two:hover, .two:hover::before, .two:hover::after {
+  animation-play-state: running;
+}
+/* assignment 3 */
+/* the animation keyframe is used from the first assignment */
+.three {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  border: black 10px solid;
+  border-bottom: transparent 10px solid;
+  animation: spin linear 1s infinite reverse;
+}
+/* assignment 4 (challenge */
+.four {
+  height: 280px;
+  width: 440px;
+  margin: 40px auto;
+  font-size: 350px;
+  font-weight: bold;
+  letter-spacing: -22px;
+  transform: scale(1, 1.2);
+  color: black;
+  background-color: lightpink;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.four::before, .four::after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-color: #FC9F00;
+  position: absolute;
+  /* to remove the scale from the pseudo elements */
+  transform: scaleY(83.33%);
+  /* animation */
+  animation-fill-mode: forwards;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.four::before {
+  left: 166px;
+  top: 11.5px;
+  animation-name: moveE;
+}
+.four::after {
+  right: 30px;
+  bottom: 20px;
+  animation-name: moveL;
+}
+@keyframes moveL {
+  12.5% {
+    right: 156px;
+    bottom: 20px;
+    background-color: #FC9F00;
+  }
+  30% {
+    bottom: 225px;
+    right: 156px;
+    background-color: #FC9F00;
+  }
+  50% {
+    bottom: 225px;
+    right: 156px;
+    background-color: transparent;
+  }
+  /* the second half of motion in waiting for moveE */
+  100% {
+    bottom: 225px;
+    right: 156px;
+    background-color: transparent;
+  }
+}
+@keyframes moveE {
+  /* the first half of motion in waiting for moveL */
+  50% {
+    left: 166px;
+    top: 11.5px;
+  }
+  55.55% {
+    left: 31px;
+    top: 11.5px;
+  }
+  61.11% {
+    left: 31px;
+    top: 109.5px;
+  }
+  66.665% {
+    left: 158px;
+    top: 109.5px;
+  }
+  /* return move of the middle of the letter */
+  72.22% {
+    left: 31px;
+    top: 109.5px;
+  }
+  77.77% {
+    left: 31px;
+    top: 219.5px;
+  }
+  83.33% {
+    left: 172px;
+    top: 219.5px;
+  }
+  /* return move of the bottom of the letter */
+  88.88% {
+    left: 31px;
+    top: 219.5px;
+  }
+  /* the big return to the top */
+  94.44% {
+    left: 31px;
+    top: 11.5px;
+  }
+  /* back to origin */
+  100% {
+    left: 166px;
+    top: 11.5px;
+  }
+}
+/* assignment media queries 1 */
+.assignment-1 {
+  color: red;
+  background-color: #258EF4;
+  margin: 10 auto;
+}
+@media print {
+  .assignment-1 {
+    font-size: 40px;
+  }
+}
+/* assignment 2 */
+.assignment-2 {
+  background-color: #258EF4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+h4 {
+  margin-bottom: 0;
+}
+h6 {
+  margin-top: 0;
+}
+.assignment-2 > * {
+  background-color: #EEEEEE;
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  width: calc(100% - 10px);
+}
+/* Small Screens */
+/* @media (min-width: 768px) {
+  .assignment-2 > * {
+    width: calc(100% - 10px);
+  }
+} */
+/* Medium Screens */
+@media (min-width: 992px) {
+  .assignment-2 > *:not(:first-child) {
+    width: calc(33.3% - 10px);
+  }
+  .assignment-2 > * > h4 {
+    color: red;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .assignment-2 > *:not(:first-child):not(:last-child) {
+    width: calc(50% - 10px);
+  }
+  .assignment-2 > :last-child {
+    width: calc(100% - 10px);
+  }
+  .assignment-2 > * > h4 {
+    color: #05988A;
+  }
+}
+/* assignment custom framework 1 */
+.customFrameWork {
+  background-color: #05988A;
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-100 {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.circle-200 {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+/* assignment custom framework 2 */
+.arrow {
+  height: 100px;
+  padding: 20px;
+  --arrow-color: #E4238B;
+  background-color: #05988A;
+  /* border color should be white this color is for testing */
+  border: 20px solid #FC9F00;
+  margin: 10px; /* will be removed when finished */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.arrow.top::before,
+.arrow.right::before,
+.arrow.bottom::before,
+.arrow.left::before {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border: transparent 20px solid;
+}
+.arrow.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-bottom-color: var(--arrow-color);
+}
+.arrow.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  border-left-color: var(--arrow-color);
+}
+.arrow.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  border-top-color: var(--arrow-color);
+}
+.arrow.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-right-color: var(--arrow-color);
+}

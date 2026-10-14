@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tables</title>
+  </head>
+  <body>
+    <h1>Book Store</h1>
+    <p>This Is My <b>Book Store</b>, Welcome</p>
+    <!--
+      thead
+      tbody
+      tfoot
+      tr => Table Row
+      td => Table Data Cell
+      th => Table Header Cell
+    -->
+    <!-- divisions are containers of elements -->
+    <div class="1">
+      <table border="1">
+        <caption>
+          Students Marks
+        </caption>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>Osama</td>
+          <td>Mohamed</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>Osama</td>
+          <td>Mohamed</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>Osama</td>
+          <td>Mohamed</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>Osama</td>
+          <td>Mohamed</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td colspan="2">Total</td>
+          <td>160</td>
+        </tr>
+      </table>
+    </div>
+    <div class="2">
+      <p>A word I want to <span style="font-weight: bold;">manipulate</span></p>
+      <p>another paragraph <br>new line</p>
+    </div>
+    <p> I want to right &lt;p&gt;</p>
+    <!-- audio and its attributes 
+        type attribute uses something called MIME types-->
+    <audio controls autoplay loop muted>
+      <source src="tarzan.mp3" type="audio/mpeg">
+      <source src="tarzan.ogg" type="audio/ogg">
+      <source src="tarzan.wav" type="audio/wav">
+      Your Browser Does Not Support Audio Tags
+    </audio>
+    <hr>
+    <video controls width="600" height="400" autoplay loop muted poster="imgs/home/cover-speed-website.png">
+      <source src="Aladdin.mp4" type="video/mp4">
+      <source src="Aladdin.ogg" type="video/ogg">
+      Your Browser Does Not Support Video Tag
+      <track src="my_file_en.vtt" kind="subtitles" srclang="en" label="English">
+      <track src="my_file_it.vtt" kind="subtitles" srclang="it" label="Italian">
+    </video>
+  </body>
+</html>

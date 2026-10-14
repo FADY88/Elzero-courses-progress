@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+.one {
+  --height: 233px;
+  --width: 400px;
+  background-color: #EEEEEE;
+  color: #03A9F4;
+  width: var(--width);
+  height: var(--height);
+  margin: 30px auto;
+  font-weight: bold;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+}
+.one::before, .one::after {
+  content: "";
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+}
+.one::before {
+  background-color: #E91E63;
+  z-index: -2;
+  transform: rotate(6deg) scale(1.03);
+}
+.one::after {
+  background-color: #03A9F4;
+  z-index: -1;
+  transform: rotate(-6deg) scale(1.03);
+}
+/* assignment 2 */
+.two {
+  --sideLength: 200px;
+  background-color: #EEEEEE;
+  width: var(--sideLength);
+  height: var(--sideLength);
+  margin: 30px auto;
+  font-weight: bold;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px black solid; */
+  border-radius: 50%;
+  /* center element horizontally and vertically without flex */
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, 50%); */
+}
+.two::before, .two::after {
+  content: "";
+  width: var(--sideLength);
+  height: var(--sideLength);
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.5s;
+}
+.two::before {
+  /* transform: scale(1.1); */
+  z-index: -2;
+  border: solid calc(var(--sideLength) * 0.1);
+  border-color: #03A9F4 #EEEEEE #03A9F4 #03A9F4;
+  transition-delay: 0.5s;
+}
+.two::after {
+  z-index: -1;
+  border: solid calc(var(--sideLength) * 0.05);
+  border-color: #E91E63 #E91E63 #E91E63 #EEEEEE;
+  
+}
+.two:hover::before, .two:hover::after {
+  transform: rotate(1turn);
+}
+/* assignment 3 */
+.three {
+  --w: 150px;
+  --h: 100px;
+  width: var(--w);
+  height: var(--h);
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin: 30px auto;
+  background-color: #FF5722; /* Orange background */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.three::before,
+.three::after {
+  content: "";
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  /* top: 0; */
+  z-index: -1;
+  background-color: #FF5722;
+}
+.three::before {
+  transform: matrix(1, 0.2, 0.2, 1, 0, 0);
+}
+.three::after {
+  transform: matrix(1, -0.2, -0.2, 1, 0, 0);
+}
+/* from chatGPT */
+.threeC {
+  margin: 10px auto;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  background-color: #FF5722; /* Orange background */
+  padding: 20px 40px;
+  display: inline-block;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+/* assignment 4 */
+.four {
+  --w: 150px;
+  --h: 100px;
+  width: var(--w);
+  height: var(--h);
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin: 30px auto;
+  background-color: #009688; /* Orange background */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.four::before,
+.four::after {
+  content: "";
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  z-index: -1;
+  background-color: #009688;
+}
+.four::before {
+  transform: matrix(0.15, 0, 0.4, 1, -115, 0);
+}
+.four::after {
+  transform: matrix(1, 0, 0.4, 1, -20, 0);
+}
+/*
+  next assignment: write values of matrix in their function
+  matrix(3, 0.2679, 0, 3, 20, 100);
+  transform: translate(20px, 100px) scaleX(300%) skewX(0deg) skewY(15deg) scaleY(300%)
+*/
+/* assignment 5 */
+.five {
+  --length: 200px;
+  width: calc(var(--length) * 1.5);
+  height: calc(var(--length) * 1.77);
+  margin: 30px auto;
+  position: relative;
+  z-index: -3;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.five::before,
+.five::after {
+  content: "";
+  position: absolute;
+}
+/* base with socket for the black diamond */
+.five::before {
+  content: "Elzero";
+  color: white;
+  height: var(--length);
+  width: calc(var(--length) * 1.45);
+  z-index: -2;
+  background-color: #607D8B;
+  border-bottom: black calc(var(--length) * 0.03) solid;
+
+  display: flex;
+  flex-direction: column-reverse;
+}
+/* black diamond */
+.five::after {
+  z-index: -1;
+  height: calc(var(--length) * 1);
+  width: calc(var(--length) * 1);
+  background-color: black;
+  border-bottom: calc(var(--length) * 0.035) white solid;
+  border-right: calc(var(--length) * 0.035) white solid;
+  transform: translateY(-49%) rotate(45deg);
+}
+
+/* assignment 6 */
+.parent {
+  perspective: 1000px;
+}
+.six {
+  --length: 200px;
+  width: var(--length);
+  height: var(--length);
+  margin: 30px auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: center center;
+}
+.six:hover {
+  transform: rotateX(-180deg);
+}
+.six::before,
+.six::after {
+  position: absolute;
+  width: var(--length);
+  height: var(--length);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+}
+.six::before {
+  content: "Front";
+  background-color: #EA2264;
+}
+.six::after {
+  content: "Back";
+  background-color: #2296F4;
+  transform: rotateZ(180deg) rotateY(180deg);
+}

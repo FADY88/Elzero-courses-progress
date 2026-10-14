@@ -1,0 +1,96 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.x {
+  /* !important means it won't get overridden */
+  background-color: red !important;
+  width: 200px;
+  height: 100px;
+  /* comma separated for each property */
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  transition-property: width, height;
+  transition-timing-function: ease-in-out;
+  /* transition: all 2s 0.5s linear; */
+}
+.x:hover {
+  width: 280px;
+  height: 120px;
+  margin-top: 50px;
+}
+/*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+.parent {
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+.parent .one,
+.parent .two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.one {
+  background-color: #ddd;
+}
+.two {
+  background-color: #aaa;
+}
+.up {
+  background-color: red;
+  color: white;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.down {
+  background-color: green;
+  color: white;
+  height: 80px;
+  margin-top: 20px;
+}
+/* Real variables in CSS */
+/*
+  CSS Variables
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fall Back Value)
+*/
+
+:root {
+  --mainColor: blue;
+  --mainPadding: 10px;
+}
+.main {
+  background-color: var(--mainColor, black);
+  color: white;
+  padding: calc(20px + var(--mainPadding));
+}
+h2 {
+  color: var(--mainColor);
+  background-color: #eee;
+  padding: var(--mainPadding);
+}
+p {
+  color: var(--mainColor);
+  border: 2px solid var(--mainColor);
+  padding: var(--mainPadding);
+}
+a:hover {
+  color: var(--mainColor);
+}
+.local {
+  --mainColor: black;
+  background-color: var(--mainColor);
+  color: white;
+}

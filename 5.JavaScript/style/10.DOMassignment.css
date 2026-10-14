@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+/* assignment 1 */
+.one-container {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+/* assignment 5 */
+.five {
+  background-color: beige;
+  > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  > form > *:not(:last-child) {
+    margin: 5px 0px;
+    width: calc(100% / 3);
+    height: 25px;
+  }
+  > form input[type="submit"] {
+    background-color: #009069;
+    color: white;
+  }
+
+  > form > .results {
+    margin-top: 30px;
+    padding: 5px;
+    background-color: #009069;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, calc(94% / 3));
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 1%;
+    > .box {
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ff5733; /* Background color */
+      color: white; /* Text color */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px; /* Padding */
+    }
+  }
+}

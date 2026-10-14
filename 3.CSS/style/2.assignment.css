@@ -1,0 +1,112 @@
+.assign-1-shape-1 {
+  width: 500px;
+  margin: 20px;
+  background-color: blueviolet;
+}
+
+.assign-1-shape-2 {
+  width: 500px;
+  margin: 20px;
+  background-color: rgba(138, 43, 226, 50%);
+}
+
+.assign-1-shape-3 {
+  width: 500px;
+  margin: 20px;
+  background-color: rgba(138, 43, 226, 10%);
+}
+
+.assign-2-shape-1 {
+  width: 400px;
+  height: 400px;
+  background-image: url("image.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.assign-2-shape-2 {
+  width: 400px;
+  height: 400px;
+  background-image: url("image.png");
+  background-repeat: repeat-y;
+  background-position: right;
+  background-size: 75%;
+}
+
+.assign-2-shape-3 {
+  width: 400px;
+  height: 400px;
+  background-image: url("image.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 75%;
+}
+
+.assign-2-shape-4 {
+  width: 400px;
+  height: 400px;
+  background-image: url("image.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right bottom;
+}
+
+.element-1 {
+  display: inline-block;
+  background-color: gray;
+  margin: 5px;
+  padding: 20px;
+  border: 5px solid red;
+  /* Outer black border */
+  box-shadow: 0 0 0 5px black;
+  /* Inner red border */
+}
+
+.element-2 {
+  margin: 5px;
+  display: inline-block;
+  background-color: gray;
+  padding: 20px;
+  border: 5px solid;
+  border-color: blue green;
+  box-shadow: 0 0 0 5px black;
+  /* Inner red border */
+}
+
+.element-3 {
+  margin: 5px;
+  display: inline-block;
+  background-color: rgb(155, 155, 155);
+  padding: 20px;
+  border: 5px dashed;
+  border-color: red green blue yellow;
+  box-shadow: 0 0 0 5px black;
+  /* Inner red border */
+}
+
+.element-4, .element-5, .element-6 {
+  background-color: gray;
+  width: 400px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  border: 5px solid gray;
+  border-style: none;
+}
+
+.element-4 {
+  /* Outer black border */
+  border-left-color: red;
+}
+
+.element-5 {
+  /* Outer black border */
+  border-left-color: red;
+  visibility: hidden;
+}
+
+.element-6 {
+  /* Outer black border */
+  border-left-color: green;
+  box-shadow: 0 0 0 10px gray;
+}

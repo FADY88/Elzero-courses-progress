@@ -1,0 +1,48 @@
+.normal, .one, .two {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #B3B3B3; /* Get The Background From Image */
+  color: black;
+}
+.one {
+  background-color: rgb(179, 179, 179, 0.1);
+}
+.two {
+  opacity: 0.1;
+}
+/* assignment 2 */
+
+.parent {
+  font-weight: bold;
+  text-align: center;
+  background-color: aquamarine;
+}
+.full, .third, .half, .quarter {
+  background-color: chocolate;
+  margin-left: 15px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+  float: left;
+  padding: 10px 0px;
+}
+.full {
+  margin-top: 15px;
+  width: calc((100% - (15px * 2)) / 1);
+}
+.third {
+  width: calc((100% - (15px * 4)) / 3);
+}
+.half {
+  width: calc((100% - (15px * 3)) / 2);
+
+}
+.quarter {
+  margin-bottom: 15px;
+  width: calc((100% - (15px * 5)) / 4);
+}
+.clear {
+  clear: both;
+}

@@ -1,0 +1,100 @@
+/*
+  Media Queries
+  Responsive Design
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.parent-1 {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+.parent-1 > div {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  width: 290px;
+}
+
+@media print {
+  .parent-1 > div {
+    font-size: 100px;
+  }
+}
+
+@media print {
+  .parent-1 > div:first-child {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .parent-1 > div {
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .parent-1 > div {
+    background-color: blue;
+  }
+}
+/*
+  Media Queries
+  Responsive Design
+  - Mobile First
+  - Test Devices
+*/
+
+.parent-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.parent-2 > div {
+  padding: 20px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+}
+
+/* Small Screens */
+
+@media (min-width: 768px) {
+  .parent-2 > div {
+    width: calc(50% - 10px);
+  }
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+  .parent-2 > div {
+    width: calc(25% - 10px);
+  }
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {
+}
+
+/* Custom */
+
+@media (max-width: 1199px) {
+}

@@ -1,0 +1,136 @@
+/*
+  Animation
+  - KeyFrames
+  - Name
+  - Duration
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.one {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.one:hover {
+  /* Animation */
+  animation-name: change-color;
+  animation-duration: 2s;
+}
+/* Code One */
+@keyframes change-color {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+/* Code Two */
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+/* Code Three */
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  5% {
+    background-color: blue;
+  }
+  80% {
+    background-color: black;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/*
+  Animation
+  - Iteration Count
+  - Timing Function
+  - Spinner Loading
+  - animation-direction: reverse | alternate | alternate-reverse;
+  - animation-delay: number of seconds
+  - animation-fill-mode: backwards | forwards | normal | both
+  - animation-iteration-count: infinite;
+  - animation-play-state: running | paused
+  there is a shorthand for all this called "animation"
+*/
+.two {
+  width: 100px;
+  height: 100px;
+  background-color: #e8e3e3;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 5px solid #e91e63;
+  transition: transform 0.3s;
+  border-left-color: transparent;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* loading animation */
+/*
+  Loading Animation
+*/
+
+body {
+  background-color: #333;
+}
+.load {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+.load div {
+  width: 20px;
+  height: 20px;
+  background-color: orchid;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation-name: up-and-down;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.load .y {
+  animation-delay: 0.3s;
+}
+.load .z {
+  animation-delay: 0.6s;
+}
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+}

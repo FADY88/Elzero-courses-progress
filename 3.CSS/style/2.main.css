@@ -1,0 +1,48 @@
+div {
+  text-align: center;
+  padding: 20px;
+  background-color: #EEE;
+  font-size: 20px;
+  border: 2px solid blue;
+}
+div p {
+  border: 2px solid;
+  border-color: inherit;
+  padding: inherit;
+}
+
+.with-ser {
+  font-family: 'Times New Roman', Times, serif;
+}
+.san-ser {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.with-ser,
+.san-ser {
+  background-color: #EEE;
+  padding: 10px;
+}
+
+/*
+  CSS units
+  - px         -> 1/96 pixels per inch
+  - es         -> time
+  - rem        -> root time
+  - percentage -> percentage of the parent
+  - vw         -> view port width (1vw = 1% of the view port width)
+
+  Default font size is 16px
+*/
+body {
+  font-size: 40px;
+}
+div {
+  font-size: 5vw;
+}
+div span {
+  font-size: 2rem;
+  /* font-weight from 100 to 900 */
+  font-weight: bold;
+  /* style of the cursor */
+  cursor: pointer;
+}

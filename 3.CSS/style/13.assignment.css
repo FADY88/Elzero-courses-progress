@@ -1,0 +1,283 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+.one_1 {
+  text-align: center;
+  padding: 50px;
+  background-color: aquamarine;
+  border-radius: 5px;
+  margin-top: 40px;
+  transition: margin-top 0.5s;
+}
+.one_2 {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: margin-top 0.5s 0.5s;
+}
+/* nested classes are awesome */
+.one_1:hover {
+  margin-top: 0px;
+  .one_2 {
+    margin-top: 50px;
+  }
+}
+/* assignment 2 */
+.two {
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+
+  background-color: aquamarine !important;
+  color: transparent !important;
+  border: 0px  !important;
+  font-size: 20px !important;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.two::before {
+  content: "Elzero";
+  font-weight: bold;
+  color: black;
+  position: relative;
+  left: 45%;
+}
+/* assignment 3 */
+:root {
+  --mainColor: #009688;
+  --mainPadding: 10px;
+}
+.three {
+  margin-bottom: var(--mainPadding, 10px);
+  padding: var(--mainPadding, 10px);
+  color: var(--mainColor, red);
+  border: var(--mainColor, black) 2px solid;
+}
+/* assignment 4 */
+.four {
+  height: 300px;
+  width: 300px;
+  color: #FF5722;
+  background-color: #eee;
+  font-weight: bold;
+  font-size: xxx-large;
+  border-radius: 50%;
+  box-shadow: 15px 0px 0px 0px #FF5722, -15px 0px 0px 0px #03A9F4;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* assignment 5 */
+.five {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: beige;
+  /* flex editor in chrome is amazing */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-around;
+}
+.five div {
+  color: white;
+  background-color: #F44336;
+  padding: 5% 0;
+  text-align: center;
+  width: calc(94% / 3);
+  margin: 2% 0;
+}
+/* assignment 6 */
+.six {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: beige;
+  padding: 2%;
+  /* flex editor in chrome is amazing */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.six div {
+  color: white;
+  background-color: #607D8B;
+  width: calc(94% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.six .one6 {
+  height: 10%;
+  order: 6;
+  align-self: flex-end;
+}
+.six .two6 {
+  height: 50%;
+  order: 5;
+}
+.six .three6 {
+  height: 10%;
+  order: 2;
+}
+.six .four6 {
+  height: 50%;
+  order: 3;
+}
+.six .five6 {
+  height: 50%;
+  order: 4;
+}
+.six .six6 {
+  height: 50%;
+  order: 1;
+}
+/* assignment 7 */
+.seven {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: beige;
+  padding: 2%;
+  /* flex editor in chrome is amazing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.seven div {
+  color: white;
+  background-color: #009688;
+  height: calc(94% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seven .one7 {
+  width: 10%;
+}
+.seven .two7 {
+  width: 60%;
+  align-self: flex-start;
+}
+.seven .three7 {
+  width: 10%;
+}
+/* assignment 8 */
+.eight {
+  --width: 600px;
+  width: var(--width);
+  height: 300px;
+  margin: 20px auto;
+  background-color: beige;
+  padding: 2%;
+  /* flex editor in chrome is amazing */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.eight div {
+  color: white;
+  width: 20%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eight .one8 {
+  background-color: #FF9800;
+  margin-left: calc(var(--width) * 0.2666);
+}
+.eight .two8 {
+  background-color: #8BC34A;
+  order: 4;
+  margin-right: calc(var(--width) * 0.2666);
+  /* align-self: flex-end; */
+}
+.eight .three8 {
+  margin-left: calc(var(--width) * 0.2666);
+  background-color: #795548;
+}
+.eight .four8 {
+  background-color: #673AB7;
+}
+/* assignment 9 */
+.page, .page * {
+  border-radius: 2%;
+}
+.page {
+  --mainColor: #DDDDDD;
+  height: 400px;
+  background-color: beige;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    background-color: var(--mainColor);
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .links {
+    background-color: var(--mainColor);
+    width: 88%;
+    list-style-type: none;
+    /* work with styling list*/
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+  }
+}
+.main-area {
+  height: 76%;
+  display: flex;
+  justify-content: space-between;
+  .content, .sidebar {
+    background-color: var(--mainColor);
+    border: var(--mainColor) solid 5px;
+  }
+  .content {
+    width: 68%;
+  }
+  .sidebar {
+    width: 31%;
+  }
+}
+.footer {
+  background-color: var(--mainColor);
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .copyright, .design {
+    margin: 0px 1%;
+  }
+}
