@@ -4,12 +4,12 @@ This repository contains my notes, exercises, assignments, and small projects fr
 
 ## Course contents
 
-- **C++** — beginner programming fundamentals, including data types, operators, control flow, arrays and strings, functions, vectors, and pointers. The folder contains lesson examples, assignments, review material, and small function implementations.
-- **HTML** — page structure and common elements, lists, tables, forms, semantic HTML, and accessibility topics such as ARIA.
-- **CSS** — selectors, the box model, positioning, pseudo-classes, transitions, variables, Flexbox, Grid, filters, gradients, transforms, animations, and media queries, with related assignments.
+- **C++** — beginner programming fundamentals, including data types, operators, control flow, arrays and strings, functions, vectors, and pointers. The folder contains lesson examples, assignments, review material, and small function implementations. [Playlist](https://www.youtube.com/playlist?list=PLDoPjvoNmBAwy-rS6WKudwVeb_x63EzgS)
+- **HTML** — page structure and common elements, lists, tables, forms, semantic HTML, and accessibility topics such as ARIA. [Playlist](https://youtube.com/playlist?list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji&si=a_Eg4fobIBBEDzcz)
+- **CSS** — selectors, the box model, positioning, pseudo-classes, transitions, variables, Flexbox, Grid, filters, gradients, transforms, animations, and media queries, with related assignments. [Playlist](https://youtube.com/playlist?list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&si=-TR0trk578j6EtkE)
 - **HTML and CSS project** — a responsive agency-style landing page based on the Leon template.
-- **JavaScript** — language fundamentals, arrays, loops, functions, objects, the DOM and BOM, destructuring, sets and maps, regular expressions, object-oriented programming, dates, JSON, AJAX, and promises.
-- **TypeScript** — introductory examples covering type annotations, data types, interfaces, classes, and generics.
+- **JavaScript** — language fundamentals, arrays, loops, functions, objects, the DOM and BOM, destructuring, sets and maps, regular expressions, object-oriented programming, dates, JSON, AJAX, and promises. [Playlist](https://youtube.com/playlist?list=PLDoPjvoNmBAx3kiplQR_oeDqLDBUDYwVv&si=SpFYaGoAk76qh8hU)
+- **TypeScript** — introductory examples covering type annotations, data types, interfaces, classes, and generics. [Playlist](https://www.youtube.com/playlist?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ)
 
 ## Repository layout
 
